@@ -16,6 +16,7 @@ defmodule HelloWorldWeb.Router do
   scope "/", HelloWorldWeb do
     pipe_through :browser
 
+    get "/hello", HelloWorldController, :world
     get "/", PageController, :index
   end
 
